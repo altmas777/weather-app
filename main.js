@@ -11,8 +11,9 @@ const searchweather = async (e)=>{
     e.preventDefault()
 
 
-    const responnse = await fetch(`http://api.weatherapi.com/v1/current.json?key=db90f70fc57a4c7087f100241252609&q=${input.value}&aqi=yes`);
+    const responnse = await fetch(`https://api.weatherapi.com/v1/current.json?key=db90f70fc57a4c7087f100241252609&q=${input.value}&aqi=yes`);
     const data = await responnse.json()
+    console.error(data);
     console.log(data);
 
     heading.className="text-6xl font-bold";
