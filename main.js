@@ -1,6 +1,3 @@
-// api : http://api.weatherapi.com/v1/current.json?key=db90f70fc57a4c7087f100241252609&q=indore&aqi=yes
-
-
 let form = document.querySelector("form");
 let input = document.querySelector("input");
 let heading = document.querySelector("#temprature_heading");
@@ -16,7 +13,7 @@ const searchweather = async (e)=>{
 
     const responnse = await fetch(`http://api.weatherapi.com/v1/current.json?key=db90f70fc57a4c7087f100241252609&q=${input.value}&aqi=yes`);
     const data = await responnse.json()
-
+    console.log(data);
 
     heading.className="text-6xl font-bold";
     subheading.className="my-2 text-4xl font-bold";
